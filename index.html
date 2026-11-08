@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy 3rd Anniversary, My Love</title>
+  <meta name="theme-color" content="#FFDFF1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+  <!-- floating hearts live here -->
+  <div id="hearts" aria-hidden="true"></div>
+
+  <!-- ============ INTRO: envelope ============ -->
+  <section id="intro" class="intro" aria-label="Opening">
+    <p class="intro-title">A little letter for you</p>
+
+    <button class="envelope" id="envelope" type="button" aria-label="Open the letter">
+      <span class="env-back"></span>
+      <span class="env-paper"><span class="env-paper-text">For my love</span></span>
+      <span class="env-front"></span>
+      <span class="env-flap"></span>
+      <span class="env-seal">&#10084;</span>
+    </button>
+
+    <p class="intro-hint">tap the envelope to open</p>
+  </section>
+
+  <!-- ============ MAIN ============ -->
+  <main id="main" class="main">
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="arch-wrap">
+        <div class="arch">
+          <img src="assets/photo-smile.jpg" alt="Her beautiful smile">
+        </div>
+        <span class="orbit o1">&#10084;</span>
+        <span class="orbit o2">&#10084;</span>
+        <span class="orbit o3">&#10084;</span>
+      </div>
+
+      <p class="eyebrow">for the one I choose, every day</p>
+      <h1 class="script-title">Happy 3rd<br>Anniversary</h1>
+      <p class="sub">my love</p>
+
+      <ul class="stats" aria-label="Our time together">
+        <li><strong>3</strong><span>years</span></li>
+        <li><strong>36</strong><span>months</span></li>
+        <li><strong>1,000+</strong><span>days</span></li>
+        <li><strong>&infin;</strong><span>still to come</span></li>
+      </ul>
+
+      <a class="scroll-cue" href="#letter" aria-label="Scroll to the letter"><span></span></a>
+    </header>
+
+    <!-- Letter -->
+    <section id="letter" class="letter-section">
+      <article class="paper">
+        <span class="tape t1"></span><span class="tape t2"></span>
+
+        <h2 class="script-title small reveal">Happy 3rd anniversary, my love! &#10084;&#65039;</h2>
+
+        <p class="reveal">I can't believe we've made it to three years together. Three years of memories, laughter, challenges, lessons, and countless moments that I'll always treasure. We've been through so much, and I'm grateful that through all the ups and downs, we still choose each other.</p>
+
+        <p class="reveal">Thank you for being part of my life, for understanding me, being patient with me, and loving me even on days when things aren't always easy. I know we're not perfect, and our relationship isn't always going to be perfect either, but I hope we never stop trying, understanding, and growing together.</p>
+
+        <p class="reveal">I want you to know that I don't just look forward to celebrating anniversaries with you. I look forward to all the ordinary days, little adventures, random conversations, and future memories we'll get to share. I still want to experience so many things with you, and I hope we get to make many more beautiful memories together.</p>
+
+        <p class="reveal">Three years down, and hopefully a lifetime of choosing each other ahead of us. I love you so much, and I'm always grateful that it's you. Happy anniversary, my love! &#10084;&#65039;</p>
+
+        <p class="signoff script-title small reveal">Forever yours</p>
+      </article>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+      <h2 class="script-title small reveal">Little pieces of you</h2>
+      <div class="gallery">
+        <figure class="polaroid reveal" style="--rot:-4deg" data-full="assets/photo-smile.jpg">
+          <img src="assets/photo-smile.jpg" alt="Smiling with her chin resting on her hand" loading="lazy">
+          <figcaption>my favorite smile</figcaption>
+        </figure>
+        <figure class="polaroid reveal" style="--rot:3deg" data-full="assets/photo-silly.jpg">
+          <img src="assets/photo-silly.jpg" alt="Playfully sticking her tongue out" loading="lazy">
+          <figcaption>my silly girl</figcaption>
+        </figure>
+        <figure class="polaroid reveal" style="--rot:-2deg" data-full="assets/photo-sweet.jpg">
+          <img src="assets/photo-sweet.jpg" alt="A sweet little smirk" loading="lazy">
+          <figcaption>that little smirk</figcaption>
+        </figure>
+        <figure class="polaroid reveal" style="--rot:4deg" data-full="assets/photo-dreamy.jpg">
+          <img src="assets/photo-dreamy.jpg" alt="A calm, dreamy look" loading="lazy">
+          <figcaption>my sweetest peace</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Finale -->
+    <section class="finale">
+      <button class="big-heart" id="bigHeart" type="button" aria-label="Send love">&#10084;</button>
+      <p class="script-title small reveal">I love you so much</p>
+      <p class="finale-note reveal">tap the heart</p>
+    </section>
+
+    <div class="player-space"></div>
+  </main>
+
+  <!-- ============ Music player ============ -->
+  <audio id="song" src="assets/song.mp3" preload="auto" loop></audio>
+
+  <div class="player" id="player" aria-label="Music player">
+    <div class="cover" id="cover"><img src="assets/photo-smile.jpg" alt=""></div>
+
+    <div class="p-info">
+      <div class="p-title"><strong>I Love You So</strong><span>ft. The Walters</span></div>
+      <div class="p-seek">
+        <span id="cur" class="time">0:00</span>
+        <input id="seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Seek song">
+        <span id="dur" class="time">0:00</span>
+      </div>
+    </div>
+
+    <div class="p-controls">
+      <button id="back" type="button" class="ctl small" aria-label="Back 10 seconds">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 5V2L7 6l5 4V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg>
+        <i>10</i>
+      </button>
+      <button id="play" type="button" class="ctl play" aria-label="Play">
+        <svg class="i-play" viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        <svg class="i-pause" viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+      </button>
+      <button id="fwd" type="button" class="ctl small" aria-label="Forward 10 seconds">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 5V2l5 4-5 4V7a6 6 0 1 0 6 6h2a8 8 0 1 1-8-8z"/></svg>
+        <i>10</i>
+      </button>
+    </div>
+
+    <div class="p-volume">
+      <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+      <input id="vol" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+    </div>
+  </div>
+
+  <!-- Photo lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img id="lightboxImg" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
